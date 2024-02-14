@@ -2,7 +2,9 @@
 
 This minimal example shows how to setup PyBind11 on Ubuntu 22.04. To learn more about PyBind11 check out the [official documentation](https://pybind11.readthedocs.io/en/stable/index.html).
 
-To 
+To try it out for yourself follow this guide.
+
+Clone this repo, create a virtual Python environment, and install PyBind11 inside. Next, build the `example.cpp` file. See commands below:
 
 ```shell
 git clone <this_repo>
@@ -14,7 +16,7 @@ pip3 install pybind11
 clang++ -shared -fPIC -std=c++11 -I./pybind11/include/ `python3.10 -m pybind11 --includes` example.cpp -o mymodule.so `python3.10-config --ldflags`
 ```
 
-__Note:__ If you encounter an error after running the last command, check out the section **Common Errors** below.
+__Note:__ If you encounter any errors, check out the section **Common Errors** below.
 
 You should now have a binary file called `mymodule.so` in the root directory of your project. You can confirm that it got created by running:
 
